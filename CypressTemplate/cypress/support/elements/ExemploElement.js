@@ -1,6 +1,11 @@
 export const ExemploElement = {
     URL: 'https://www.centauro.com.br',
 
-    "searchBar": '#search-input' ,
+    searchBar: '.gLFyf',
+
+    tituloResultadoBusca: '',
+
+    headerUser: '#header-user-anonymous',
+
 }
 
