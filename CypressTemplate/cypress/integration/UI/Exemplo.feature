@@ -1,5 +1,6 @@
 Feature: Efetuar pesquisa de tenis
 
+
 Background: Acessar site do google
     Given que acesso o site da google
 
@@ -9,3 +10,4 @@ Background: Acessar site do google
     Scenario: Efetuar pesquisa de tenis
         When efetuo pesquisa de um tenis nike 
         Then é apresentado lista com resultado pesquisa
+
