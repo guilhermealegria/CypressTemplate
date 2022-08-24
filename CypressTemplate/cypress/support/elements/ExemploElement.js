@@ -1,6 +1,6 @@
 export const ExemploElement = {
-    URL: 'https://www.google.com.br/',
+    URL: 'https://www.centauro.com.br',
 
-    "searchBar": '.gLFyf .gsfi',
+    "searchBar": '#search-input' ,
 }
 
