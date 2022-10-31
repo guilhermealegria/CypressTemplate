@@ -5,7 +5,9 @@ I have 30 years, live in Niterói,RJ-Brazil and not much still speak english, bu
 I have an perfil specialist technical with focus in test engineering, the are 8 year that work with quality of software, between trainee and formal work.
 
 
-- 🤝 I’m here looking to collaborate with projects at test automation. 
+    - 🤝 I’m here looking to collaborate with projects at test automation. 
+
+
 
 ![YOUR github stats](https://github-readme-stats.vercel.app/api?username=guilhermealegria)
 
