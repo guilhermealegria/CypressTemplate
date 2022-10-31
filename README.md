@@ -1,5 +1,5 @@
 ### Hi 👋
-Hi, Welcome to the my profile. My name is Guilherme Moraes Alegria and go describe a little me to amount with the contents in experience, 
+Welcome to the my profile. My name is Guilherme Moraes Alegria and go describe a little me to amount with the contents in experience, 
 courses and specializations down.
 I have 30 years, live in Niterói,RJ-Brazil and not much still speak english, but effort me. I be extrovert, Perfectionist and organized, but i like change by evolution. 
 I have an perfil specialist technical with focus in test engineering, the are 8 year that work with quality of software, between trainee and formal work.
