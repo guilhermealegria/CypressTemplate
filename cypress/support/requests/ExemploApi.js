@@ -4,6 +4,7 @@
 const elements = require('../elements/ExemploApiElement');
 class ExemploApi {
     verificarConexao(){
+        
         cy.requestAPI('GET', elements.ExemploApiElement.URL).then(response => {
             expect(response.status).to.equal(200)
         })
