@@ -1,4 +1,7 @@
 Feature: Teste de api
 
-Scenario: Efetuar pesquisa
-    Given Teste 
+Background: 
+    Given que tenha conexão com a API
+
+Scenario: Efetuar pesquisa com sucesso
+    Then efetuo pesquisa de todos os comentarios
