@@ -1,5 +1,5 @@
 export const ExemploElement = {
-    URL: 'https://www.centauro.com.br',
+    URL: 'http://www.google.com.br/',
 
     searchBar: '.gLFyf',
 
