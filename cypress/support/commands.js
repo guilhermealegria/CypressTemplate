@@ -46,7 +46,9 @@ Cypress.Commands.add('requestAPI', (metodo, url, comentario) => {
 
     } else if( metodo = 'PUT'){
 
-    } else if( metodo = 'DELETE'){
+    } else if( metodo = 'PATCH'){
+
+    }else if( metodo = 'DELETE'){
 
     } else {
         cy.log('Metodo selecionado incorreto')
