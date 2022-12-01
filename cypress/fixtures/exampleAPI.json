@@ -1,22 +1,22 @@
 {
-  "name": "Guilherme Alegria",
-  "username": "BretBel",
-  "email": "Sincere2033@april.biz",
+  "name": "function (gender) {\n    if (typeof faker.definitions.name.male_first_name !== \"undefined\" && typeof faker.definitions.name.female_first_name !== \"undefined\") {\n      // some locale datasets ( like ru ) have first_name split by gender. since the name.first_name field does not exist in these datasets,\n      // we must randomly pick a name from either gender array so faker.name.firstName will return the correct locale data ( and not fallback )\n\n      if(typeof gender === 'string') {\n        if(gender.toLowerCase() === 'male') {\n          gender = 0;\n        }\n        else if(gender.toLowerCase() === 'female') {\n          gender = 1;\n        }\n      }\n\n      if (typeof gender !== 'number') {\n        if(typeof faker.definitions.name.first_name === \"undefined\") {\n          gender = faker.datatype.number(1);\n        }\n        else {\n          //Fall back to non-gendered names if they exist and gender wasn't specified\n          return faker.random.arrayElement(faker.definitions.name.first_name);\n        }\n      }\n      if (gender === 0) {\n        return faker.random.arrayElement(faker.definitions.name.male_first_name)\n      } else {\n        return faker.random.arrayElement(faker.definitions.name.female_first_name);\n      }\n    }\n    return faker.random.arrayElement(faker.definitions.name.first_name);\n  } function (gender) {\n    if (typeof faker.definitions.name.male_last_name !== \"undefined\" && typeof faker.definitions.name.female_last_name !== \"undefined\") {\n      // some locale datasets ( like ru ) have last_name split by gender. i have no idea how last names can have genders, but also i do not speak russian\n      // see above comment of firstName method\n      if (typeof gender !== 'number') {\n        gender = faker.datatype.number(1);\n      }\n      if (gender === 0) {\n        return faker.random.arrayElement(faker.locales[faker.locale].name.male_last_name);\n      } else {\n        return faker.random.arrayElement(faker.locales[faker.locale].name.female_last_name);\n      }\n    }\n    return faker.random.arrayElement(faker.definitions.name.last_name);\n  }",
+  "username": "function (firstName, lastName) {\n    var result;\n    firstName = firstName || faker.name.firstName();\n    lastName = lastName || faker.name.lastName();\n    switch (faker.datatype.number(2)) {\n      case 0:\n        result = firstName + faker.datatype.number(99);\n        break;\n      case 1:\n        result = firstName + faker.random.arrayElement([\".\", \"_\"]) + lastName;\n        break;\n      case 2:\n        result = firstName + faker.random.arrayElement([\".\", \"_\"]) + lastName + faker.datatype.number(99);\n        break;\n    }\n    result = result.toString().replace(/'/g, \"\");\n    result = result.replace(/ /g, \"\");\n    return result;\n  }",
+  "email": "function (firstName, lastName, provider) {\n    provider = provider || faker.random.arrayElement(faker.definitions.internet.free_email);\n    return  faker.helpers.slugify(faker.internet.userName(firstName, lastName)) + \"@\" + provider;\n  }",
   "address": {
-      "street": "Street Kulas Light",
-      "suite": "Apt. 775",
-      "city": "Sao Goncalo",
-      "zipcode": "99988-3874",
-      "geo": {
-          "lat": "-47.3159",
-          "lng": "92.1496"
-      }
+    "street": "function () {\n    var result;\n    var suffix = faker.address.streetSuffix();\n    if (suffix !== \"\") {\n      suffix = \" \" + suffix\n    }\n\n    switch (faker.datatype.number(1)) {\n      case 0:\n        result = faker.name.lastName() + suffix;\n        break;\n      case 1:\n        result = faker.name.firstName() + suffix;\n        break;\n    }\n    return result;\n  }",
+    "suite": "Apt. 775",
+    "city": "Sao Goncalo",
+    "zipcode": "function(format) {\n    // if zip format is not specified, use the zip format defined for the locale\n    if (typeof format === 'undefined') {\n      var localeFormat = faker.definitions.address.postcode;\n      if (typeof localeFormat === 'string') {\n        format = localeFormat;\n      } else {\n        format = faker.random.arrayElement(localeFormat);\n      }\n    }\n    return Helpers.replaceSymbols(format);\n  }",
+    "geo": {
+      "lat": "-47.3159",
+      "lng": "92.1496"
+    }
   },
-  "phone": "21-998901283",
-  "website": "moraesalegria.org",
+  "phone": "function (format) {\n    format = format || faker.phone.phoneFormats();\n    return faker.helpers.replaceSymbolWithNumber(format);\n  }",
+  "website": "function () {\n    return faker.internet.protocol() + '://' + faker.internet.domainName();\n  }",
   "company": {
-      "name": "Noruega-Crona",
-      "catchPhrase": "Multi-Played client-server neural-net",
-      "bs": "real-time e-markets"
+    "name": "Noruega-Crona",
+    "catchPhrase": "Multi-Played client-server neural-net",
+    "bs": "real-time e-markets"
   }
 }

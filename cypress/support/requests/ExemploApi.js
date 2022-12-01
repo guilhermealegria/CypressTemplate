@@ -1,8 +1,12 @@
 /// <reference types="Cypress" />
 
-const users = require('../..//fixtures/exampleAPI.json');
+const users = require('../../fixtures/exampleAPI.json');
 const elements = require('../elements/ExemploApiElement');
 class ExemploApi {
+    criarUsuario(){
+        cy.generatorUserAPI()
+    }
+    
     verificarResultadoDePesquisa(){
         cy.requestAPI('GET', elements.ExemploApiElement.URL).then(response => {
             expect(response.status).to.equal(200)

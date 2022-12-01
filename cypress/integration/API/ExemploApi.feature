@@ -1,5 +1,7 @@
 Feature: Teste de api
 
+Background: 
+    Given crio um usuario
 
 Scenario: Efetuar pesquisa de usuarios com sucesso
     Then efetuo pesquisa de todos os usuarios

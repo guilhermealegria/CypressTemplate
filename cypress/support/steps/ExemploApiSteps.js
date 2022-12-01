@@ -3,7 +3,10 @@
 import Request from '../requests/ExemploApi';
 const search = new Request;
 
-
+//Background
+Given('crio um usuario', () => {
+    search.criarUsuario()
+})
 //Scenario: Efetuar pesquisa de usuarios com sucesso
 Then('efetuo pesquisa de todos os usuarios', () => {
     search.verificarResultadoDePesquisa()

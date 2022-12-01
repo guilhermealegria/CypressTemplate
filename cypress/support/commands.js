@@ -1,4 +1,7 @@
 /// <reference types="Cypress" />
+
+const Faker = require('faker/lib')
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -51,7 +54,6 @@ Cypress.Commands.add('requestAPI', (metodo, url, users) => {
             body: {
                 "name": users.name
             }
-
         })
     }else if( metodo == 'DELETE'){
         cy.request({
@@ -61,4 +63,30 @@ Cypress.Commands.add('requestAPI', (metodo, url, users) => {
     } else {
         cy.log('Metodo selecionado incorreto')
     }
+})
+
+Cypress.Commands.add('generatorUserAPI', () => {
+    const faker = require('faker')
+    cy.writeFile('cypress/fixtures/exampleAPI.json', {
+            "name": `${faker.name.firstName} ${faker.name.lastName}`,
+            "username": `${faker.internet.userName}`,
+            "email": `${faker.internet.email}`,
+            "address": {
+                "street": `${faker.address.streetName}`,
+                "suite": "Apt. 775",
+                "city": "Sao Goncalo",
+                "zipcode": `${faker.address.zipCode}`,
+                "geo": {
+                    "lat": "-47.3159",
+                    "lng": "92.1496"
+                }
+            },
+            "phone": `${faker.phone.phoneNumber}`,
+            "website": `${faker.internet.url}`,
+            "company": {
+            "name": "Noruega-Crona",
+            "catchPhrase": "Multi-Played client-server neural-net",
+            "bs": "real-time e-markets"
+            }
+    })
 })
