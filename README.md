@@ -7,7 +7,7 @@
 <br>
 <br>
 
-![YOUR github stats](https://github-readme-stats.vercel.app/api?username=guilhermealegriashow_icons=true)
+![YOUR github stats](https://github-readme-stats.vercel.app/api?username=guilhermealegria&show_icons=true)
 
 [![CI Cypress Template](https://github.com/guilhermealegria/CypressTemplate/actions/workflows/ci.yml/badge.svg)](https://github.com/guilhermealegria/CypressTemplate/actions/workflows/ci.yml)
 
