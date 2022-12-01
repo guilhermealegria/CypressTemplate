@@ -25,31 +25,39 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-
-Cypress.Commands.add('requestAPI', (metodo, url, comentario) => {
-    if( metodo = 'GET'){
+Cypress.Commands.add('requestAPI', (metodo, url, users) => {
+    if( metodo == 'GET'){
         cy.request({
             method: metodo,
-            url: url
+            url: `${url}/1`
         })
-    } else if( metodo = 'POST'){
+    } else if( metodo == 'POST'){
         cy.request({
             method: metodo,
             url: url,
-            body: {
-                postId: comentario.postId,
-                id: comentario.id,
-                email: comentario.email,
-                body: comentario.corpo
-            }
+            body: users
         })
 
-    } else if( metodo = 'PUT'){
+    } else if( metodo == 'PUT'){
+        cy.request({
+            method: metodo,
+            url: `${url}/1`,
+            body: users
+        })
+    } else if( metodo == 'PATCH'){
+        cy.request({
+            method: 'PATCH',
+            url: `${url}/1`,
+            body: {
+                "name": users.name
+            }
 
-    } else if( metodo = 'PATCH'){
-
-    }else if( metodo = 'DELETE'){
-
+        })
+    }else if( metodo == 'DELETE'){
+        cy.request({
+            method: metodo,
+            url: `${url}/1`
+        })
     } else {
         cy.log('Metodo selecionado incorreto')
     }

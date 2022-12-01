@@ -1,4 +1,22 @@
 {
-  "userId": "",
-  "title":""
+  "name": "Guilherme Alegria",
+  "username": "BretBel",
+  "email": "Sincere2033@april.biz",
+  "address": {
+      "street": "Street Kulas Light",
+      "suite": "Apt. 775",
+      "city": "Sao Goncalo",
+      "zipcode": "99988-3874",
+      "geo": {
+          "lat": "-47.3159",
+          "lng": "92.1496"
+      }
+  },
+  "phone": "21-998901283",
+  "website": "moraesalegria.org",
+  "company": {
+      "name": "Noruega-Crona",
+      "catchPhrase": "Multi-Played client-server neural-net",
+      "bs": "real-time e-markets"
+  }
 }
