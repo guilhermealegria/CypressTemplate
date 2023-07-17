@@ -2,7 +2,7 @@
 <br>
 - Este projeto tem o intuito de facilitar a imersäo no framework cypress, tranzendo exemplos de cenários básicos á avançados em testes de user inferface e api.
 </br>
-- This one project has intention at facilitate the immersion in framework cypress, broung examples the scenarios basic to advanced in the tests at user interface and API.
+- This project has intention at facilitate the immersion in framework cypress, broung examples the scenarios basic to advanced in the tests at user interface and API.
 
 <br>
 <br>
