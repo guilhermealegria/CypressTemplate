@@ -13,11 +13,11 @@ class ExemploPage {
     }
 
     pesquisarTenisNike(){
-        cy.get(elements.ExemploElement.searchBar).should('be.visible').type('tenis nike{enter}')
+        cy.get(elements.ExemploElement.searchBar).should('be.visible').type('nike{enter}')
     }
 
     verificarResultadodeBusca(){
-        cy.contains("tenis nike").should('be.visible')
+        cy.contains(elements.ExemploElement.tituloResultadoBusca).should('be.visible')
     }
 
 }
