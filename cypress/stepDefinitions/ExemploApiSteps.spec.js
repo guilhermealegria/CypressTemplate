@@ -1,6 +1,6 @@
-/* global Given, Then, When */
 
-import Request from '../requests/ExemploApi';
+import {Given, When, Then} from '@badeball/cypress-cucumber-preprocessor';
+import Request from '../support/requests/ExemploApi';
 const search = new Request;
 
 //Background

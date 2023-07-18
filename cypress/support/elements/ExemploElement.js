@@ -1,9 +1,9 @@
 export const ExemploElement = {
-    URL: 'http://www.google.com.br/',
+    URL: 'https://www.netshoes.com.br/',
 
-    searchBar: '.gLFyf',
+    searchBar: '#search-input',
 
-    tituloResultadoBusca: '',
+    tituloResultadoBusca: 'Resultados de busca para "Nike"',
 
     headerUser: '#header-user-anonymous',
 
