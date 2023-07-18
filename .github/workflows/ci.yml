@@ -12,3 +12,5 @@ jobs:
         uses: cypress-io/github-action@v2.2.7
         with:
           config-file: cypress.config.js
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
