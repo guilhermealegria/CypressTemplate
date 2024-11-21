@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@mmisty/cypress-allure-adapter": "^3.2.2",
+    "cypress": "^13.16.0"
+  }
+}
